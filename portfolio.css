@@ -339,40 +339,56 @@ html {
 
 /* ----------------------- VEILLE ----------------------*/
 .veille-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
     background-color: rgba(255, 0, 149, 0.242);
+    padding: 60px;
+    text-align: center;
 }
 
-.veille-text {
-    width: 50%;
-    text-align: left;
-    font-size: 18px;
+.veille-section h2 { 
+    color: white;
+    font-size: 45px;
+}
+
+.veille-section p { 
     color: white;
 }
 
-.veille-text h2 {
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
+.veille-content p { 
+    color: black;
 }
 
-.veille-text p {
-    line-height: 1.6;
+.veille-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
 }
 
-.veille-image {
-    width: 40%;
-    text-align: center;
-}
-
-.veille-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+.veille-content {
+    background: white;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.veille-content:hover {
+    transform: scale(1.05);
+}
+
+/* Liste stylée */
+.veille-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.veille-content ul li {
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 /* ----------------------- CONTACT ----------------------*/
