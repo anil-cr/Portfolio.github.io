@@ -24,7 +24,7 @@ main {
 header .logo a {
     font-size: 35px;
     font-weight: bold;
-    color: rgba(255, 0, 149, 0.418); /* Couleur de base */
+    color: #660000; /* Couleur de base */
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     display: inline-block;
@@ -112,7 +112,7 @@ nav ul li a:hover {
 .sidebar-footer {
     width: 100%;
     text-align: center;
-    background-color: rgba(255, 0, 149, 0.242);
+    background-color: #660000;
     font-size: 15px;
     font-weight: bold;
     position: absolute;
@@ -138,7 +138,7 @@ nav ul li a:hover {
     color: white;
     font-size: 2em;
     font-weight: bold;
-    background: linear-gradient(270deg, rgba(255, 0, 149, 0.242), black);
+    background: linear-gradient(270deg, #660000, black);
     background-size: 400% 400%;
     animation: animatedBackground 10s infinite ease-in-out;
 }
@@ -179,8 +179,8 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px;
-    background-color: rgba(255, 0, 149, 0.242);
+    padding: 40px;
+    background-color: #660000;
 }
 
 .profil-text {
@@ -216,11 +216,34 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Bouton Télécharger CV */
+.btn-cv {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    border: 2px solid #800020;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover */
+.btn-cv:hover {
+    background-color: #660000;
+    color: white;
+    transform: scale(1.05);
+}
+
+
 /* ----------------------- COMPETENCES ----------------------*/
 .competences-section {
     height: 100vh;
     padding: 50px;
-    background-color: rgba(255, 0, 149, 0.242);
+    background-color: #800020;
 }
 
 .competences-section h2 {
@@ -237,28 +260,131 @@ html {
     flex-wrap: wrap;
 }
 
+.competences-containerbas {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
 .competence {
     max-width: 300px;
+    display: flex;
+    justify-content: center;
 }
 
 .competence img {
     width: 150px;
     height: 150px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-/* ----------------------- STAGES ----------------------*/
-.stage-section {
-    height: 100vh;
-    padding: 60px; /* Ajustement du padding */
-    background-color:rgba(255, 0, 149, 0.242);
-    font-size: 80px;
-    color: white;
+/* ----------------------- PARCOURS TIMELINE ---------------------- */
+.parcours-section {
+    height: 200vh;
+    padding: 50px;
+    background-color: #660000;
 }
 
-.stage-section h2 {
+.parcours-section h2 {
+    color: white; 
+    font-size: 100px;
     font-weight: bold;
-    margin-bottom: 80px;
+    margin-bottom: 200px;
+}
+
+.parcours-timeline {
+    background-color: #660000;
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+/* Ligne centrale */
+.parcours-timeline::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Item */
+.parcours-item {
+    position: relative;
+    width: 50%;
+    padding: 30px 40px;
+    box-sizing: border-box;
+}
+
+/* Point */
+.parcours-item::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border: 4px solid #800020;
+    border-radius: 50%;
+    top: 40px;
+    z-index: 1;
+}
+
+/* Gauche */
+.parcours-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.parcours-item.left::before {
+    right: -11px;
+}
+
+/* Droite */
+.parcours-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.parcours-item.right::before {
+    left: -11px;
+}
+
+/* Contenu */
+.parcours-content {
+    background: #660000;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 80px; /* juste pour visualiser les blocs */
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .parcours-timeline::after {
+        left: 20px;
+    }
+
+    .parcours-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 20px;
+    }
+
+    .parcours-item.left,
+    .parcours-item.right {
+        left: 0;
+        text-align: left;
+    }
+
+    .parcours-item::before {
+        left: 11px;
+    }
 }
 
 /* ----------------------- PROJETS ----------------------*/
@@ -266,7 +392,7 @@ html {
     height: 100vh;
     text-align: center;
     padding: 60px;
-    background-color: rgba(255, 0, 149, 0.242);
+    background-color: #800020;
 }
 
 .projets-section h2{
@@ -336,17 +462,17 @@ html {
 
 /* Effet bouton au survol */
 .btn:hover {
-    background-color: rgba(255, 0, 149, 0.242);
+    background-color: #660000;
 }
 
 .projet-card.futur {
     opacity: 0.5;
 }
 
-/* ----------------------- PROJET PAGE ----------------------*/
+/* ----------------------- PROJET1 PAGE ----------------------*/
 .projet-section {
-    padding: 80px 10%;
-    background-color: rgba(255, 0, 149, 0.242);
+    padding: 90px 10px;
+    background-color: #660000;
     text-align: center;
     color: white;
 }
@@ -381,7 +507,7 @@ html {
     width: 50%;
     margin-top: 20px;
     font-size: 1.7em; /* Légèrement plus grand */
-    color: rgba(0, 166, 255, 0.712);
+    color: lightskyblue;
     position: relative;
     padding-left: 30px; /* Décale le texte vers la droite */
 }
@@ -395,7 +521,7 @@ html {
     transform: translateY(-50%);
     width: 6px; /* Épaisseur de la barre */
     height: 60%;
-    background-color: rgb(0, 166, 255); /* Couleur du soulignement */
+    background-color: lightskyblue; /* Couleur du soulignement */
     border-radius: 3px; /* Arrondi léger */
 }
 
@@ -411,10 +537,54 @@ html {
     color: white;
 }
 
+/* ----------------------- PROJET2 PAGE ----------------------*/
+.features-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.features-list > li {
+    margin-bottom: 15px;
+}
+
+.roles-list {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.roles-list li {
+    margin-bottom: 8px;
+}
+
+.features-list strong {
+    color: #7DCEA0; /* adapte à ta charte */
+}
+
+.btn-projet2 {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    border: 2px solid #7DCEA0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover */
+.btn-projet2:hover {
+    background-color: #7DCEA0;
+    color: white;
+    transform: scale(1.05);
+}
+
 /* ----------------------- VEILLE ----------------------*/
 .veille-section {
     height: 100vh;
-    background-color: rgba(255, 0, 149, 0.242);
+    background-color: #660000;
     padding: 60px;
     text-align: center;
 }
@@ -471,7 +641,7 @@ html {
 .contact-section {
     height: 100vh;
     padding: 50px 150px; /* Ajustement du padding */
-    background-color:rgba(255, 0, 149, 0.242);
+    background-color: #800020;
     color: white;
 }
 
@@ -503,7 +673,7 @@ html {
 form {
     max-width: 500px;
     width: 100%;
-    background: rgba(245, 245, 245, 0.473);
+    background: #660000;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -524,8 +694,8 @@ input, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
+    border-radius: 5px; 
+    font-size: 1em; 
 }
 
 textarea {
@@ -536,7 +706,7 @@ textarea {
 button {
     width: 100%;
     padding: 10px;
-    background-color: black;
+    background-color: #800020;
     border: none;
     color: white;
     font-size: 1.2em;
@@ -546,7 +716,7 @@ button {
 }
 
 button:hover {
-    background-color: rgba(255, 0, 149, 0.242);
+    background-color: #660000;
 }
 
 .form-row {
