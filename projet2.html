@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Anil C.</title>
+    <link rel="stylesheet" href="CSS/portfolio.css">
+    <script src="JavaScript/Menu.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href="index.html">Anil CINAR</a></h1>
+        <nav class="navbar">
+            <img src="img/tete.jpg" class="tete-logo" alt="Illustration de profil">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#stage">Stage</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#veille">Veille</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <footer class="sidebar-footer">
+            <p>Copyright 2025 &copy; Anil C.</p>
+        </footer>
+    </header>
+
+    <main>
+        <!-- Section Projet -->
+        <section id="projet" class="projet-section">
+            <h2>Projet : Pharmasi</h2>
+            <div class="projet-container">
+                <div class="projet-description">
+                    <img src="img/projet2.1.PNG" alt="Aperçu du projet">
+                    <p>
+                        PharmaSI est un projet de développement d’un système d’information destiné à gérer des rapports de visite dans un contexte pharmaceutique.
+                        Le projet a été mené en équipe de 2 à 3 personnes dans un cadre pédagogique, en respectant une méthodologie de gestion de projet agile. 
+                        Le projet a été réalisé en C# pour créer l'application et en MySQL pour créer la base de données. 
+                    </p>
+                    <p>
+                        L’objectif était de concevoir une application de gestion de rapports de visite développée en équipe dans un cadre pédagogique. 
+                        Il a été réalisé en suivant la méthodologie agile Scrum, de l’analyse du cahier des charges jusqu’à la livraison d’un produit fonctionnel. 
+                        Le projet comprend la conception de la base de données, le développement de l’application, ainsi que des phases de tests et de documentation.
+                    </p>
+
+                    <h3>Sprints</h3>
+                    <ul>
+                        <li><strong>Sprint 1 :</strong> Authentification des visiteurs, délégués et responsables, incluant la conception (MCD/UML), la création de la base de données 
+                                                            et le développement de l'écran de connexion en C#</li>
+                        <li><strong>Sprint 2 :</strong> Conception et le développement des écrans d'accueil pour les visiteurs médicaux, délégués régionaux et responsables de secteur, 
+                                                            en assurant l'ouverture conditionnelle par rôle et l'annihilation des injections SQL.</li>
+                        <li><strong>Sprint 3 :</strong> Conception (MCD/UML) et le développement de la fonctionnalité de consultation de la fiche d'un praticien, incluant la création de la classe praticien 
+                                                            et l'écran d'affichage</li>
+                        <li><strong>Sprint 4 :</strong> Développement de la fonctionnalité de Consultation des produits, incluant la mise à jour de la BDD et la réalisation de l'écran d'affichage 
+                                                            et de la classe produit</li>
+                        <li><strong>Sprint 5 :</strong> Réalisation de l'écran et du code d'enregistrement d'un Rapport de visite, tout en intégrant le hashage des mots de passe</li>
+                    </ul>
+
+                    <h3>Fonctionnalités</h3>
+
+<ul class="features-list">
+    <li>
+        <strong>Technologie :</strong>
+        Application lourde développée en C# avec une base de données MySQL.
+    </li>
+
+    <li>
+        <strong>Rôles utilisateurs :</strong>
+        <ul class="roles-list">
+            <li>
+                <strong>Visiteur Médical :</strong>
+                Création et consultation de ses rapports de visite, accès aux fiches produit et praticien.
+            </li>
+            <li>
+                <strong>Délégué Régional :</strong>
+                Même droits que le visiteur, avec consultation des rapports de ses visiteurs subordonnés.
+            </li>
+            <li>
+                <strong>Responsable de Secteur :</strong>
+                Accès aux fiches produit/praticien et aux rapports de visite de tous ses subordonnés.
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Accès :</strong>
+        L’accès à l’application est strictement réservé à ces trois profils.
+    </li>
+</ul>
+
+<a href="https://docs.google.com/document/d/1CAM02Ejw6sODps5XB0mxrZt09GXr9jxZ/edit?usp=drive_link&ouid=112574097435476860073&rtpof=true&sd=true" download class="btn-projet2">
+    Voir en détail le projet
+</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
